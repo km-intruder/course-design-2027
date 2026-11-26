@@ -1,0 +1,441 @@
+{
+  "course_name": "데이터베이스",
+  "course_name_en": "데이터베이스",
+  "department": "경민대학교 지능형소프트웨어과",
+  "year": "1학년",
+  "semester": "2학기",
+  "publish_date": "2026-11-27 (2027학년도 교수협의용 초안)",
+  "keywords": "데이터베이스, AI·DX, SMART 교수법, 실습",
+  "development_purpose": "2027학년도 1-2 데이터베이스의 교수설계가이드 공동 작성 및 교과 간 연계 검토",
+  "development_background_intro": "관계형 DB 설계·SQL·CRUD·정규화",
+  "development_goal_summary": "데이터베이스의 주요 실무 기능을 직접 구현하고 결과물을 검증한다.",
+  "professor_name": "미정",
+  "textbook": "미선정(교수 협의 후 기입)",
+  "course_type": "전공선택",
+  "credits": 3,
+  "theory_hours": 0,
+  "practice_hours": 3,
+  "ncs_job": "미확정",
+  "core_competency": "데이터베이스 핵심 개념·실습 구현·검증·개선 역량",
+  "course_description": "관계형 DB 설계·SQL·CRUD·정규화",
+  "learning_goals": [
+    "데이터베이스의 기본 개념을 설명할 수 있다.",
+    "데이터베이스의 핵심 실습을 수행하고 결과물을 구현할 수 있다.",
+    "실습 중 발생한 오류를 분석·수정·검증할 수 있다.",
+    "실습·프로젝트 결과를 문서화하고 발표할 수 있다."
+  ],
+  "prerequisite": "선수교과 및 진입 수준(담당교수 확인 필요)",
+  "follow_up": "후속 전공·캡스톤 연계(담당교수 확인 필요)",
+  "ai_dx_understanding": "AI·DX 보조 도구는 학습 과정에서 활용하되 학습자의 직접 구현·설명·검증을 필수로 한다.",
+  "smart_methods": [
+    {
+      "method_name": "플립드러닝",
+      "description": "데이터베이스 실습에 플립드러닝을(를) 연계하여 학습자 참여와 결과물 검증을 강화한다.",
+      "tools": "대학 LMS·전공 실습도구"
+    },
+    {
+      "method_name": "사례기반학습",
+      "description": "데이터베이스 실습에 사례기반학습을(를) 연계하여 학습자 참여와 결과물 검증을 강화한다.",
+      "tools": "대학 LMS·전공 실습도구"
+    },
+    {
+      "method_name": "문제중심학습(PBL)",
+      "description": "데이터베이스 실습에 문제중심학습(PBL)을(를) 연계하여 학습자 참여와 결과물 검증을 강화한다.",
+      "tools": "대학 LMS·전공 실습도구"
+    },
+    {
+      "method_name": "융합교육",
+      "description": "데이터베이스 실습에 융합교육을(를) 연계하여 학습자 참여와 결과물 검증을 강화한다.",
+      "tools": "대학 LMS·전공 실습도구"
+    }
+  ],
+  "integration_summary": "개념 학습 → 실습 수행 → 오류 검증 → 피드백 → 성찰 기록의 수업 흐름을 운영한다.",
+  "method_guides": [
+    {
+      "method_name": "플립드러닝",
+      "overview": "데이터베이스에서 플립드러닝 적용 검토",
+      "operation_steps": [
+        {
+          "step_name": "준비",
+          "activities": "선행 개념 확인",
+          "instructor_role": "환경·자료 준비",
+          "tools": "LMS"
+        },
+        {
+          "step_name": "실습",
+          "activities": "이번 주 기술 실습과 문제해결",
+          "instructor_role": "시연·지도",
+          "tools": "교과별 전용 도구"
+        },
+        {
+          "step_name": "피드백",
+          "activities": "결과물 검증 및 보완",
+          "instructor_role": "학습자 피드백",
+          "tools": "실습 산출물"
+        }
+      ],
+      "support_framework": [
+        {
+          "element": "기초학습",
+          "methods": "단계별 예제",
+          "tools": "LMS"
+        },
+        {
+          "element": "심화학습",
+          "methods": "선택 과제",
+          "tools": "개발환경"
+        }
+      ],
+      "examples": "데이터베이스 실습 적용 사례"
+    },
+    {
+      "method_name": "사례기반학습",
+      "overview": "데이터베이스에서 사례기반학습 적용 검토",
+      "operation_steps": [
+        {
+          "step_name": "준비",
+          "activities": "선행 개념 확인",
+          "instructor_role": "환경·자료 준비",
+          "tools": "LMS"
+        },
+        {
+          "step_name": "실습",
+          "activities": "이번 주 기술 실습과 문제해결",
+          "instructor_role": "시연·지도",
+          "tools": "교과별 전용 도구"
+        },
+        {
+          "step_name": "피드백",
+          "activities": "결과물 검증 및 보완",
+          "instructor_role": "학습자 피드백",
+          "tools": "실습 산출물"
+        }
+      ],
+      "support_framework": [
+        {
+          "element": "기초학습",
+          "methods": "단계별 예제",
+          "tools": "LMS"
+        },
+        {
+          "element": "심화학습",
+          "methods": "선택 과제",
+          "tools": "개발환경"
+        }
+      ],
+      "examples": "데이터베이스 실습 적용 사례"
+    },
+    {
+      "method_name": "문제중심학습(PBL)",
+      "overview": "데이터베이스에서 문제중심학습(PBL) 적용 검토",
+      "operation_steps": [
+        {
+          "step_name": "준비",
+          "activities": "선행 개념 확인",
+          "instructor_role": "환경·자료 준비",
+          "tools": "LMS"
+        },
+        {
+          "step_name": "실습",
+          "activities": "이번 주 기술 실습과 문제해결",
+          "instructor_role": "시연·지도",
+          "tools": "교과별 전용 도구"
+        },
+        {
+          "step_name": "피드백",
+          "activities": "결과물 검증 및 보완",
+          "instructor_role": "학습자 피드백",
+          "tools": "실습 산출물"
+        }
+      ],
+      "support_framework": [
+        {
+          "element": "기초학습",
+          "methods": "단계별 예제",
+          "tools": "LMS"
+        },
+        {
+          "element": "심화학습",
+          "methods": "선택 과제",
+          "tools": "개발환경"
+        }
+      ],
+      "examples": "데이터베이스 실습 적용 사례"
+    },
+    {
+      "method_name": "융합교육",
+      "overview": "데이터베이스에서 융합교육 적용 검토",
+      "operation_steps": [
+        {
+          "step_name": "준비",
+          "activities": "선행 개념 확인",
+          "instructor_role": "환경·자료 준비",
+          "tools": "LMS"
+        },
+        {
+          "step_name": "실습",
+          "activities": "이번 주 기술 실습과 문제해결",
+          "instructor_role": "시연·지도",
+          "tools": "교과별 전용 도구"
+        },
+        {
+          "step_name": "피드백",
+          "activities": "결과물 검증 및 보완",
+          "instructor_role": "학습자 피드백",
+          "tools": "실습 산출물"
+        }
+      ],
+      "support_framework": [
+        {
+          "element": "기초학습",
+          "methods": "단계별 예제",
+          "tools": "LMS"
+        },
+        {
+          "element": "심화학습",
+          "methods": "선택 과제",
+          "tools": "개발환경"
+        }
+      ],
+      "examples": "데이터베이스 실습 적용 사례"
+    }
+  ],
+  "digital_tools": [
+    {
+      "category": "전공 실습",
+      "name": "데이터베이스 관련 소프트웨어·장비",
+      "description": "담당교수 검토 후 실습 버전·장비 확정",
+      "usage": "15주 실습운영",
+      "color": "#2563eb"
+    },
+    {
+      "category": "협업",
+      "name": "GitHub·대학 LMS",
+      "description": "개발 협업·제출",
+      "usage": "교과목 특성에 따라 선택",
+      "color": "#0d9488"
+    }
+  ],
+  "weeks": [
+    {
+      "weekNum": 1,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "DBMS와 관계형 모델",
+      "goal": "DBMS와 관계형 모델의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "DBMS와 관계형 모델 — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 2,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "SELECT·WHERE·ORDER BY",
+      "goal": "SELECT·WHERE·ORDER BY의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "SELECT·WHERE·ORDER BY — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 3,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "INSERT·UPDATE·DELETE",
+      "goal": "INSERT·UPDATE·DELETE의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "INSERT·UPDATE·DELETE — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 4,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "키·관계·제약조건",
+      "goal": "키·관계·제약조건의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "키·관계·제약조건 — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 5,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "JOIN과 다중 테이블 조회",
+      "goal": "JOIN과 다중 테이블 조회의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "JOIN과 다중 테이블 조회 — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 6,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "집계·GROUP BY",
+      "goal": "집계·GROUP BY의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "집계·GROUP BY — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 7,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "데이터 모델링·ERD",
+      "goal": "데이터 모델링·ERD의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "데이터 모델링·ERD — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 8,
+      "is_midterm": true,
+      "is_final": false,
+      "topic": "중간 종합 실습 및 형성평가",
+      "goal": "중간 종합 실습 및 형성평가의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "중간 종합 실습 및 형성평가 — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "중간 실습평가(제안)"
+    },
+    {
+      "weekNum": 9,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "DBMS와 관계형 모델",
+      "goal": "DBMS와 관계형 모델의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "DBMS와 관계형 모델 — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 10,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "SELECT·WHERE·ORDER BY",
+      "goal": "SELECT·WHERE·ORDER BY의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "SELECT·WHERE·ORDER BY — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 11,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "INSERT·UPDATE·DELETE",
+      "goal": "INSERT·UPDATE·DELETE의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "INSERT·UPDATE·DELETE — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 12,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "키·관계·제약조건",
+      "goal": "키·관계·제약조건의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "키·관계·제약조건 — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 13,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "JOIN과 다중 테이블 조회",
+      "goal": "JOIN과 다중 테이블 조회의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "JOIN과 다중 테이블 조회 — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 14,
+      "is_midterm": false,
+      "is_final": false,
+      "topic": "집계·GROUP BY",
+      "goal": "집계·GROUP BY의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "집계·GROUP BY — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "주차별 실습 산출물 및 오류수정 기록(제안)"
+    },
+    {
+      "weekNum": 15,
+      "is_midterm": false,
+      "is_final": true,
+      "topic": "최종 결과물 시연 및 성취평가",
+      "goal": "최종 결과물 시연 및 성취평가의 핵심 개념을 설명하고 실습 수행 결과를 검증할 수 있다.",
+      "content": "최종 결과물 시연 및 성취평가 — 이론·사례 학습, 교수자 시연, 직접 실습, 실행 결과 점검 및 성찰 기록(세부시간은 교수 협의).",
+      "tools": "데이터베이스 교과 실습환경(담당교수 확인)",
+      "assessment": "최종 결과물·시연평가(제안)"
+    }
+  ],
+  "activity_guides": [
+    {
+      "method_name": "플립드러닝",
+      "step": "사전학습 → 실습 → 검증",
+      "content": "데이터베이스 과제 수행 및 검증",
+      "tools": "전공 도구·LMS",
+      "weekly_tasks": "관련 주차 선택 적용",
+      "support_items": "학습자 수준별 예제"
+    },
+    {
+      "method_name": "사례기반학습",
+      "step": "사전학습 → 실습 → 검증",
+      "content": "데이터베이스 과제 수행 및 검증",
+      "tools": "전공 도구·LMS",
+      "weekly_tasks": "관련 주차 선택 적용",
+      "support_items": "학습자 수준별 예제"
+    },
+    {
+      "method_name": "문제중심학습(PBL)",
+      "step": "사전학습 → 실습 → 검증",
+      "content": "데이터베이스 과제 수행 및 검증",
+      "tools": "전공 도구·LMS",
+      "weekly_tasks": "관련 주차 선택 적용",
+      "support_items": "학습자 수준별 예제"
+    },
+    {
+      "method_name": "융합교육",
+      "step": "사전학습 → 실습 → 검증",
+      "content": "데이터베이스 과제 수행 및 검증",
+      "tools": "전공 도구·LMS",
+      "weekly_tasks": "관련 주차 선택 적용",
+      "support_items": "학습자 수준별 예제"
+    }
+  ],
+  "collaboration_guide": "프로젝트 역할·기여도·실행 결과·수정 이력을 남긴다.",
+  "ethics_warning": "개인정보·API 키·학내 비공개자료는 외부 AI 서비스나 공개 GitHub에 입력하지 않는다. 코드·데이터 라이선스와 AI 결과의 사실성을 검증한다.",
+  "attendance_rate": 15,
+  "attendance_description": "수업 참여·실습 참여 및 학습 기록(제안)",
+  "attendance_tool": "대학 LMS / 교수자 확인",
+  "midterm_rate": 25,
+  "midterm_description": "1~7주 핵심 역량 통합 실습·개념 확인(제안)",
+  "midterm_tool": "실습 과제/수행 루브릭",
+  "final_rate": 30,
+  "final_description": "파일 기반 성적관리 프로그램 초안 기반 최종 실습 및 성취평가(제안)",
+  "final_tool": "시연·기능 검증·성찰 보고서",
+  "assignment_rate": 30,
+  "assignment_description": "주차별 실습 산출물·문제해결 기록·팀 협업(제안)",
+  "assignment_tool": "실습 체크리스트·Git 또는 LMS 기록",
+  "appendix_sections": [
+    {
+      "section_title": "편성 근거",
+      "section_content": "2027학년도 11/26(2) 정규과정 교육과정표·교과목 설명"
+    },
+    {
+      "section_title": "교수 배정",
+      "section_content": "미정 (2026-2 강의이력 기반 후보)"
+    },
+    {
+      "section_title": "검토 전제",
+      "section_content": "주차별 계획·평가비율·교재·도구는 담당교수 승인 전 제안값"
+    }
+  ],
+  "_draft_metadata": {
+    "version": "2027-draft-github-v1",
+    "semester_code": "1-2",
+    "professor_candidate": "미정",
+    "assessment_rates_are_proposed": true,
+    "syllabus_and_profile_provided": false,
+    "approval_status": "교수협의 전"
+  }
+}
