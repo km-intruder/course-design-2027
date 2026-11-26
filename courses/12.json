@@ -9,7 +9,7 @@
   "development_purpose": "2027학년도 2-1 AI데이터분석의 교수설계가이드 공동 작성 및 교과 간 연계 검토",
   "development_background_intro": "Python 전처리·EDA·기초 시각화·데이터 분석",
   "development_goal_summary": "AI데이터분석의 주요 실무 기능을 직접 구현하고 결과물을 검증한다.",
-  "professor_name": "미정",
+  "professor_name": "황준원 (후보)",
   "textbook": "미선정(교수 협의 후 기입)",
   "course_type": "전공선택",
   "credits": 3,
@@ -423,7 +423,7 @@
     },
     {
       "section_title": "교수 배정",
-      "section_content": "미정 (2026-2 강의이력 기반 후보)"
+      "section_content": "황준원 (후보) (2026-2학기 강의이력 후보)"
     },
     {
       "section_title": "검토 전제",
@@ -433,7 +433,7 @@
   "_draft_metadata": {
     "version": "2027-draft-github-v1",
     "semester_code": "2-1",
-    "professor_candidate": "미정",
+    "professor_candidate": "황준원 (후보)",
     "assessment_rates_are_proposed": true,
     "syllabus_and_profile_provided": false,
     "approval_status": "교수협의 전"
