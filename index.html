@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027 지능형소프트웨어과 · 교수설계가이드</title>
+<meta name="description" content="경민대학교 지능형소프트웨어과 2027학년도 교수설계가이드 공동작성 허브">
+<style>
+:root{--navy:#142b43;--teal:#087e83;--line:#dce5ec;--muted:#617286;--bg:#f5f7fa;--soft:#edf8f6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#15283c;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif;line-height:1.6}
+header{background:linear-gradient(110deg,#10283f,#1a4e63);color:#fff;padding:24px max(20px,calc((100vw - 1160px)/2))}
+header h1{font-size:1.55rem;margin:7px 0 2px}header p{margin:0;color:#d5e5ed}.container{max-width:1160px;margin:auto;padding:24px}
+section.info,.list,.detail{background:white;border:1px solid var(--line);border-radius:14px;padding:20px}
+.info{margin-bottom:18px}.info h2{margin:0 0 7px;font-size:1.18rem}.info p{margin:0}
+.metrics{display:flex;flex-wrap:wrap;gap:24px;margin:15px 0}.metrics b{font-size:1.4rem;display:block}
+.warning{padding:11px;border-left:4px solid #bd8736;background:#fff8ea;margin:12px 0;font-size:.91rem}
+.bar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+button,select,input,textarea{font:inherit}button,.btn{background:white;border:1px solid #c5d3df;color:#15283c;border-radius:8px;cursor:pointer;padding:8px 11px;text-decoration:none}button:hover,.btn:hover{background:var(--soft)}
+button.main,.main{background:var(--teal);border-color:var(--teal);color:white}
+input,select,textarea{border:1px solid #cbd5df;border-radius:7px;padding:9px;max-width:100%}input[type=search]{width:min(310px,95%)}
+.layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:18px}.list .items{max-height:73vh;overflow:auto}
+.entry{border:1px solid #e0e8ed;border-radius:10px;padding:11px;cursor:pointer;margin:8px 0}
+.entry.active,.entry:hover{border-color:var(--teal);background:var(--soft)}
+.entry strong{display:block}.small{font-size:.84rem;color:var(--muted)}.pill{background:#dff2f0;color:#086764;border-radius:30px;padding:2px 7px;font-size:.76rem}
+.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.between{justify-content:space-between}
+h2{margin:2px 0 10px}h3{margin-top:24px}label{font-weight:600;display:block;margin:11px 0 4px}
+textarea{width:100%;min-height:83px;resize:vertical}input.data{width:100%}
+details{border-bottom:1px solid var(--line);padding:12px 0}summary{cursor:pointer;font-weight:600}
+.status{color:var(--teal);font-size:.86rem}.error{color:#bb441d}.footer{text-align:center;color:var(--muted);margin:24px;font-size:.82rem}
+@media(max-width:840px){.layout{grid-template-columns:1fr}.container{padding:14px}.list .items{max-height:340px}header{padding:20px}}
+@media print{header,.bar,.list,.noprint,.footer{display:none!important}.layout{display:block}.detail,.info{border:0}.container{max-width:none}details{break-inside:avoid}}
+</style></head><body>
+<header><b>KM · COURSE DESIGN 2027</b><h1>지능형소프트웨어과 교수설계 허브</h1><p>경민대학교 · 2027학년도 교육과정 · 공동 교수설계</p></header>
+<main class="container">
+<section class="info"><h2>35개 교과목 · 교수협의용 교수설계가이드</h2><p>교과목을 선택해 수업목표와 15주차 계획을 검토하고 수정본 JSON을 저장할 수 있습니다.</p><div class="metrics"><div><b>35개</b>전공 교과목</div><div><b>102학점</b>전공 편성</div><div><b>525주</b>주차별 설계 초안</div></div>
+<div class="warning">초안 안내: 담당교원, 15주 세부 활동, SMART 교수법 및 평가비율은 담당교수 협의 전 제안값입니다. 수정사항은 <b>현재 기기에만 저장</b>되며 GitHub에 자동 반영되지 않습니다.</div></section>
+<div class="bar"><input id="search" type="search" placeholder="교과목·교수명 검색" aria-label="교과목 검색"><select id="semester" aria-label="학기별 보기"><option value="all">전체 학기</option></select><span id="resultCount" class="small">35개</span><a class="btn" href="https://github.com/km-intruder/course-design-2027" target="_blank" rel="noopener">저장소 열기</a></div>
+<div class="layout"><aside class="list"><h2>교과목 목록</h2><div id="items" class="items">불러오는 중...</div></aside>
+<section id="detail" class="detail"><p>왼쪽에서 교과목을 선택해 주세요.</p></section></div>
+<p class="footer">경민대학교 지능형소프트웨어과 · 2027학년도 교육과정 최종안(11/26(2)) 기준 · 검토용 초안</p></main>
+<script>
+(function(){
+"use strict";
+var catalog=[],current=null,active=null;
+var el=function(id){return document.getElementById(id)};
+var safe=function(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")};
+function itemHtml(c){return '<div class="entry'+(c.id===active?' active':'')+'" data-course="'+safe(c.id)+'"><div class="row between"><strong>'+safe(c.name)+'</strong><span class="pill">'+safe(c.semester)+'</span></div><div class="small">'+safe(c.faculty)+' · '+c.credits+'학점</div></div>'}
+function renderList(){var q=el("search").value.toLowerCase(),s=el("semester").value;var xs=catalog.filter(function(c){return(s==="all"||c.semester===s)&&(!q||(c.name+" "+c.faculty+" "+c.desc).toLowerCase().includes(q))});el("resultCount").textContent=xs.length+"개";el("items").innerHTML=xs.length?xs.map(itemHtml).join(""):"검색 결과 없음";Array.from(el("items").querySelectorAll("[data-course]")).forEach(function(b){b.addEventListener("click",function(){openCourse(b.dataset.course)})})}
+function formField(text,path,value,big){var id="f"+path.replace(/\W/g,"_");return '<label for="'+id+'">'+safe(text)+'</label>'+(big?'<textarea id="'+id+'" data-field="'+safe(path)+'">'+safe(value)+'</textarea>':'<input id="'+id+'" class="data" data-field="'+safe(path)+'" value="'+safe(value)+'">')}
+function rateCheck(){if(!current)return;var total=["attendance_rate","midterm_rate","final_rate","assignment_rate"].reduce(function(t,k){return t+(Number(current[k])||0)},0);el("ratesum").textContent="평가 비율 합계: "+total+"% (제안값, 담당교수 검토 필수)";el("ratesum").className=total===100?"status":"error"}
+function show(){if(!current)return;var c=current, h='<h2>'+safe(c.course_name)+'</h2><p class="small">'+safe(c.year)+" "+safe(c.semester)+" · "+c.credits+"학점 / 이론 "+c.theory_hours+" · 실습 "+c.practice_hours+" · "+safe(c.course_type)+'</p><p>'+safe(c.course_description)+'</p>';
+h+='<div class="row noprint"><button id="save" class="main">이 기기에 저장</button><button id="export">수정본 JSON 다운로드</button><a class="btn" target="_blank" href="guides/'+active+'.html">11장 전체 가이드</a><a class="btn" href="plans/'+active+'.md" download>15주 수업안</a><button id="reset">초기화</button></div><p class="status" id="savestatus"></p>';
+h+='<h3>교과 정보</h3>'+formField("담당교수", "professor_name",c.professor_name)+formField("교과목 설명", "course_description",c.course_description,true)+formField("선수학습", "prerequisite",c.prerequisite,true)+formField("후속 교과 연계", "follow_up",c.follow_up,true);
+h+='<h3>학습목표</h3>'+c.learning_goals.map(function(g,i){return formField("학습목표 "+(i+1),"learning_goals."+i,g,true)}).join("");
+h+='<h3>15주 교수설계</h3>'+c.weeks.map(function(w,i){return '<details'+(i===0?' open':'')+'><summary>'+w.weekNum+'주차 · '+safe(w.topic)+'</summary>'+formField("주제","weeks."+i+".topic",w.topic)+formField("학습목표","weeks."+i+".goal",w.goal,true)+formField("수업활동","weeks."+i+".content",w.content,true)+formField("평가·산출물","weeks."+i+".assessment",w.assessment,true)+'</details>'}).join("");
+h+='<h3>SMART 교수법(제안)</h3>'+c.smart_methods.map(function(m){return '<p><b>'+safe(m.method_name)+'</b> — '+safe(m.description)+'</p>'}).join("");
+h+='<h3>평가비율(제안)</h3>'+["attendance_rate","midterm_rate","final_rate","assignment_rate"].map(function(k,i){return formField(["출석","중간","기말","과제"][i],k,c[k])}).join("")+'<p id="ratesum"></p>';
+el("detail").innerHTML=h;
+Array.from(el("detail").querySelectorAll("[data-field]")).forEach(function(inp){inp.addEventListener("input",function(){var parts=inp.dataset.field.split("."),t=current;for(var j=0;j<parts.length-1;j++)t=t[parts[j]];var k=parts[parts.length-1];t[k]=k.endsWith("_rate")?Number(inp.value):inp.value;el("savestatus").textContent="수정됨 · 저장 또는 JSON 다운로드가 필요합니다.";if(k.endsWith("_rate"))rateCheck()})});
+el("save").onclick=function(){try{localStorage.setItem("km2027_"+active,JSON.stringify(current));el("savestatus").textContent="현재 브라우저에 임시저장했습니다."}catch(e){el("savestatus").textContent="저장 오류: "+e.message}};
+el("export").onclick=function(){var blob=new Blob([JSON.stringify(current,null,2)],{type:"application/json;charset=utf-8"});var u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download=active+"_"+current.course_name+".json";a.click();setTimeout(function(){URL.revokeObjectURL(u)},300)};
+el("reset").onclick=function(){if(confirm("이 기기의 해당 교과목 수정내역을 초기화하시겠습니까?")){localStorage.removeItem("km2027_"+active);openCourse(active)}};rateCheck()}
+async function openCourse(id){var c=catalog.find(function(x){return x.id===id});if(!c)return;active=id;renderList();try{var r=await fetch(c.json);if(!r.ok)throw Error("HTTP "+r.status);var data=await r.json();try{var cache=JSON.parse(localStorage.getItem("km2027_"+id)||"null");if(cache&&cache.course_name===data.course_name)data=cache}catch(e){}current=data;show();var url=new URL(location.href);url.searchParams.set("course",id);history.replaceState(null,"",url)}catch(e){el("detail").innerHTML='<p class="error">교과목 자료 로딩에 실패했습니다: '+safe(e.message)+'</p>'}}
+async function init(){try{var r=await fetch("data.json");if(!r.ok)throw Error("HTTP "+r.status);catalog=(await r.json()).courses;var semesters=[...new Set(catalog.map(function(c){return c.semester}))];el("semester").innerHTML='<option value="all">전체 학기</option>'+semesters.map(function(s){return '<option value="'+safe(s)+'">'+safe(s)+'</option>'}).join("");el("search").oninput=renderList;el("semester").onchange=renderList;renderList();await openCourse(new URLSearchParams(location.search).get("course")||catalog[0].id)}catch(e){el("items").textContent="데이터를 불러오지 못했습니다: "+e.message}}
+document.addEventListener("DOMContentLoaded",init);
+})();
+</script></body></html>
