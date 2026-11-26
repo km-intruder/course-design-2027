@@ -9,7 +9,7 @@
   "development_purpose": "2027학년도 3-2 클라우드서비스구축실무의 교수설계가이드 공동 작성 및 교과 간 연계 검토",
   "development_background_intro": "VM·도메인·Docker 실행·Reverse Proxy·HTTPS",
   "development_goal_summary": "클라우드서비스구축실무의 주요 실무 기능을 직접 구현하고 결과물을 검증한다.",
-  "professor_name": "김태현 · 김광섭 (후보)",
+  "professor_name": "김태현",
   "textbook": "미선정(교수 협의 후 기입)",
   "course_type": "전공선택",
   "credits": 2,
@@ -423,7 +423,7 @@
     },
     {
       "section_title": "교수 배정",
-      "section_content": "김태현 · 김광섭 (후보) (2026-2학기 강의이력 후보)"
+      "section_content": "김태현 (2027학년도 Notion 배정안 기준)"
     },
     {
       "section_title": "검토 전제",
@@ -433,7 +433,7 @@
   "_draft_metadata": {
     "version": "2027-draft-github-v1",
     "semester_code": "3-2",
-    "professor_candidate": "김태현 · 김광섭 (후보)",
+    "professor_candidate": "김태현",
     "assessment_rates_are_proposed": true,
     "syllabus_and_profile_provided": false,
     "approval_status": "교수협의 전"
